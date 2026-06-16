@@ -97,8 +97,6 @@ def main():
         for _ in rolled_word:
             current_guess.append("_")
 
-        # Partita effettiva
-
         while score > 0 and len(letters_to_try) > 0 and "".join(current_guess) != rolled_word.strip():
             guessed = guess(letters_to_try)
             roll_turn(guessed)
@@ -111,8 +109,6 @@ def main():
 
 
         playing = True if input("Vuoi continuare a giocare?[S|N] ").lower() == "s" else False
-
-        
 
     print(f"SESSIONE TERMINATA\nIl bot ha vinto {games_won} partita/e\nIl bot ha perso {games_lost} partita/e")
 
